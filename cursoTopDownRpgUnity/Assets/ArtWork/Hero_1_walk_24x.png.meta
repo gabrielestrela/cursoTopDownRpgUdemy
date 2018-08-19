@@ -1,21 +1,25 @@
 fileFormatVersion: 2
-guid: 3bce139a2c6144f7db986032d30332ae
-timeCreated: 1534341127
+guid: 6b6bbcfd418d342daa5b628d47140711
+timeCreated: 1534537342
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: down_move1
-    21300002: down_idle
-    21300004: down_move2
-    21300006: right_move1
-    21300008: right_idle
-    21300010: right_move2
-    21300012: left_move1
-    21300014: left_move
-    21300016: left_move2
-    21300018: up_move1
-    21300020: up_idle
-    21300022: up_move2
+    21300000: downMove1
+    21300002: downIdle
+    21300004: downMove2
+    21300006: downIdle2
+    21300008: rightMove1
+    21300010: rightIdle1
+    21300012: rightMove2
+    21300014: rightIdle2
+    21300016: leftMove1
+    21300018: leftIdle1
+    21300020: leftMove2
+    21300022: leftIdle2
+    21300024: upMove1
+    21300026: upIdle1
+    21300028: upMove2
+    21300030: upIdle2
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -57,7 +61,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -133,169 +137,225 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: down_move1
+      name: downMove1
       rect:
         serializedVersion: 2
         x: 25
         y: 311
         width: 21
-        height: 38
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: down_idle
+      name: downIdle
       rect:
         serializedVersion: 2
         x: 97
         y: 311
         width: 21
-        height: 39
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: down_move2
+      name: downMove2
       rect:
         serializedVersion: 2
         x: 169
         y: 311
         width: 21
-        height: 38
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: right_move1
+      name: downIdle2
       rect:
         serializedVersion: 2
-        x: 25
-        y: 214
+        x: 241
+        y: 311
+        width: 21
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightMove1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 215
+        width: 23
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightIdle1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 215
         width: 22
-        height: 39
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: right_idle
+      name: rightMove2
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 215
+        width: 23
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightIdle2
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 215
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: leftMove1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 119
+        width: 24
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: leftIdle1
       rect:
         serializedVersion: 2
         x: 97
-        y: 214
-        width: 21
-        height: 40
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        y: 119
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: right_move2
+      name: leftMove2
       rect:
         serializedVersion: 2
         x: 169
-        y: 214
-        width: 21
-        height: 39
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        y: 119
+        width: 23
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: left_move1
+      name: leftIdle2
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 119
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: upMove1
       rect:
         serializedVersion: 2
         x: 25
-        y: 119
-        width: 21
-        height: 38
-      alignment: 1
-      pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: left_move
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 119
-        width: 21
-        height: 39
-      alignment: 1
-      pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: left_move2
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 119
-        width: 21
-        height: 38
-      alignment: 1
-      pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: up_move1
-      rect:
-        serializedVersion: 2
-        x: 25
         y: 22
         width: 21
-        height: 39
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: up_idle
+      name: upIdle1
       rect:
         serializedVersion: 2
         x: 97
         y: 22
         width: 21
-        height: 40
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: up_move2
+      name: upMove2
       rect:
         serializedVersion: 2
         x: 169
         y: 22
         width: 21
-        height: 39
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: upIdle2
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 22
+        width: 21
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

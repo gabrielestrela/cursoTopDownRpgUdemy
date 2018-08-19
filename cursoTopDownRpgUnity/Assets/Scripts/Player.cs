@@ -14,7 +14,7 @@ public class Player : MonoBehaviour {
     private void GetInput() {
         direction = Vector2.zero;
 
-        if(Input.GetKey(KeyCode.W) || (Input.GetKey(KeyCode.W) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))) {
+        if(Input.GetKey(KeyCode.W)) {
             direction += Vector2.up;
 
         }
@@ -30,9 +30,6 @@ public class Player : MonoBehaviour {
         {
             direction += Vector2.right;
         }
-        if(Input.anyKey == false){
-            animator.SetTrigger("Idle");
-        }
     }
     private void Move()
     {
@@ -41,8 +38,8 @@ public class Player : MonoBehaviour {
         AnimateMovement(direction);
     }
     private void AnimateMovement(Vector2 direction) {
-        animator.SetFloat("x", direction.x);
-        animator.SetFloat("y", direction.y);
+        animator.SetFloat("X", direction.x);
+        animator.SetFloat("Y", direction.y);
     }
     private void Start()
     {
