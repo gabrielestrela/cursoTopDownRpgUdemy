@@ -56,7 +56,7 @@ public class Player : MonoBehaviour {
         float y = Input.GetAxisRaw("Vertical");
 
         // Reset the moveDelta
-        moveDelta = new Vector3(x, y, 0);
+        moveDelta = new Vector3(x, y, 0) * speed;
 
         // Swap sprite direction, wether you're going right or left
         //if(moveDelta.x > 0) {
@@ -70,12 +70,14 @@ public class Player : MonoBehaviour {
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
         if(hit.collider == null){
             // Make this thing move!
-            transform.Translate(0, moveDelta.y * Time.deltaTime, 0);   
+            transform.Translate(0, moveDelta.y * Time.deltaTime, 0);
+            Debug.Log("entrei1");
         }
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
         if (hit.collider == null)
         {
             // Make this thing move!
+            Debug.Log("entrei2");
             transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
         }
 	}
