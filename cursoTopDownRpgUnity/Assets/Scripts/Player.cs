@@ -24,11 +24,11 @@ public class Player : MonoBehaviour {
         }
         if (Input.GetKey(KeyCode.A))
         {
-            direction += Vector2.left;
+            direction += Vector2.left * 1.4f;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            direction += Vector2.right;
+            direction += Vector2.right * 1.4f;
         }
     }
     private void Move()
@@ -43,6 +43,7 @@ public class Player : MonoBehaviour {
     }
     private void Start()
     {
+        speed = 1.1f;
         animator = GetComponent<Animator>();
         direction = Vector2.down;
         boxCollider = GetComponent<BoxCollider2D>();
@@ -56,7 +57,7 @@ public class Player : MonoBehaviour {
         float y = Input.GetAxisRaw("Vertical");
 
         // Reset the moveDelta
-        moveDelta = new Vector3(x, y, 0) * speed;
+        moveDelta = new Vector3(x, y, 0);
 
         // Swap sprite direction, wether you're going right or left
         //if(moveDelta.x > 0) {
@@ -68,16 +69,18 @@ public class Player : MonoBehaviour {
 
         // Make sure we can move in this directions, by casting a box there first, if the box returns null, we`re free to move
         hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
+        Debug.Log(hit);
         if(hit.collider == null){
             // Make this thing move!
             transform.Translate(0, moveDelta.y * Time.deltaTime, 0);
-            Debug.Log("entrei1");
+            //Debug.Log("entrei1");
         }
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
+        Debug.Log(hit);
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime) + 1, LayerMask.GetMask("Actor", "Blocking"));
         if (hit.collider == null)
         {
             // Make this thing move!
-            Debug.Log("entrei2");
+            //Debug.Log("entrei2");
             transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
         }
 	}
